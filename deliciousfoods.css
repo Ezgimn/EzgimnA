@@ -1,0 +1,153 @@
+body{
+  margin: 0;
+  background-color: #fafafa;
+
+}
+
+nav{
+
+  background-color:  #138d75;
+  font-size: 20px;
+  margin-top: -10px;
+  margin-left: -20px;
+}
+
+li{
+  display: inline;
+  margin-right: 20px;
+}
+
+.foods_title{
+  color: rgba(240,100,100,0.9);
+
+}
+
+li a{
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  color : rgba(255,255,255,0.8);
+  transition: 1s;
+  line-height: 1.8;
+  height: 100%;
+
+}
+
+
+li a:hover{
+  color: rgba(255,255,255,1);
+}
+
+
+div{
+ display: block;
+ float:left;
+ height:200px;
+ width:200px;
+ margin:10px;
+ -webkit-transition:all .8s linear;
+ -moz-transition:all .8s linear;
+ -o-transition:all .8s linear;
+ -ms-transition:all .8s linear;
+ transition:all .8s linear;
+ margin-top: 20px;
+}
+
+
+.image {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  margin:10px;
+  margin-top:20px;
+}
+
+.container {
+  position: relative;
+  width: 200px;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height:200px;
+  width: 200px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 10pt;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  word-break: normal;
+  padding-right: 8%;
+}
+
+section{
+  display:block;
+  float:left;
+  width:70%;
+  margin-left: 15%;
+  padding-top: 5%;
+}
+
+section a{
+  display:inline-block;
+  float:left;
+  width:25%;
+  text-decoration:none;
+  text-align:center;
+  padding:5px 0;
+  color:black;
+  font-family: 'Kanit', sans-serif;
+}
+
+a:focus[data-filter]{
+    background-color:#138d75 ;
+     outline:none;
+}
+a:hover{
+    background-color:#138d75 ;
+}
+
+
+a[data-filter="fast-food"]:focus ~ div img:not([data-filter="fast-food"]){
+  opacity: 0.2;
+}
+
+a[data-filter="traditional"]:focus ~ .container:hover .overlay:not([data-filter="traditional"]){
+  display: inline;
+  opacity: 0;
+}
+
+a[data-filter="traditional"]:focus ~ div img:not([data-filter="traditional"]){
+  opacity: 0.2;
+}
+
+a[data-filter="fast-food"]:focus ~ .container:hover .overlay:not([data-filter="fast-food"]){
+  opacity: 0;
+}
+
+a[data-filter="dessert"]:focus ~ div img:not([data-filter="dessert"]){
+  opacity: 0.2;
+}
+
+
+a[data-filter="dessert"]:focus ~ .container:hover .overlay:not([data-filter="dessert"]){
+  opacity: 0;
+}
